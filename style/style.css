@@ -1,0 +1,448 @@
+/* 
+    Test fine modulo
+    data:  05.02.2024
+    Gianluca Chiaravalloti
+*/
+
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+/* Navbar */
+.navbar {
+    height: 80px;
+    background-color:  #fff;
+    border-bottom: 1px solid #10101010;
+    box-shadow: 0 5px 10px rgb(220, 220, 220);
+    display: flex;
+    gap: 380px;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.icons-btn {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.icons-btn i {
+    font-size: 1.4em;
+    cursor: pointer;
+    color: #757575;
+}
+
+.icons-btn button {
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #fff;
+    border: 1px solid #a8a8a8;
+    color: #000000;
+    cursor: pointer;
+}
+
+.icons-btn .user-nav {
+    width: 40px;
+    height: 40px;
+    background-color: #f4511e;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 400;
+    cursor: pointer;
+}
+/* -------------------- end manbar */
+
+/* Main */
+.container {
+    /* width: 100vw; */
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Container blog */
+.blog-container {
+    width: 50%;
+    min-width: 400px;
+    height: auto;
+}
+
+.container-page {
+    display: flex;
+    border-bottom: 1px solid #a8a8a8;
+    margin-right: 40px;
+}
+
+.container-page h3 {
+    margin: 40px 0 0 20px;
+    padding: 20px 0 20px 0;
+    text-transform: uppercase;
+}
+
+.page {
+    color: #757575;
+}
+
+.container-page h3:hover {
+    cursor: pointer;
+}
+
+.selected {
+    border-bottom: 1px solid #000000;
+    cursor: pointer; 
+}
+
+.article-blog {
+    display: flex;
+    margin: 20px 20px 0 0;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.user img {
+    width: 30px;
+    border-radius: 5px;
+}
+
+.user img:hover {
+    cursor: pointer;
+}
+
+.user h4 {
+    margin-left: 10px;
+}
+
+.text-content h1 {
+    margin-top: 10px;
+    font-size: 1.8em;
+}
+
+.text-content h1:hover {
+    cursor: pointer;
+}
+
+.text-content p {
+    color: #757575;
+}
+
+.info-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.info-text p {
+    color: #757575;
+}
+
+.info-text span {
+    background-color: #f2f2f2;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.info-text span:hover {
+    cursor: pointer;
+}
+
+.info-icons i {
+    font-size: 1.2em;
+    margin-left: 20px;
+}
+
+.info-icons i:hover {
+    cursor: pointer;
+}
+
+.img-content {
+    padding: 20px;
+}
+
+.img-content:hover {
+    cursor: pointer;
+}
+/* -------------------- end container blog */
+
+/* Sidebar - content twitter */
+.sidebar {
+    width: 25%;
+    min-width: 300px;
+    height: auto;
+    border-left: 1px solid #a8a8a8;
+}
+
+.content-twitter {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.logo-medium-fill img {
+    width: 60px;
+}
+
+.logo-medium-fill {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+}
+
+.logo-medium-fill span, i {
+    font-size: 2.0em;
+}
+
+.logo-medium-fill span {
+    color: #757575;
+}
+
+.logo-medium-fill i {
+    color: #37a1f2;
+}
+
+.follow-twitter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.follow-twitter h3 {
+    width: 80%;
+    text-align: center;
+    color: #333333;
+}
+
+.follow-twitter p {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #a8a8a8;
+    padding: 5px;
+    border-radius: 50px;
+}
+.follow-twitter i {
+    font-size: 1.5em;
+    color: #37a1f2;
+}
+
+.follow-twitter h3,
+.connect-twitter,
+a {
+    margin-top: 20px;
+}
+
+.follow-twitter a {
+    color: #bdbdbd;
+}
+
+.follow-twitter:hover {
+    cursor: pointer;
+}
+
+.line {
+    width: 80%;
+    margin-top: 20px;
+    border-bottom: 1px solid #a8a8a8;
+}
+/* -------------------- end content twitter */
+
+/* Sidebar - fixed sticky */
+.sidebar-fixed {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: sticky;
+    top: 80px;
+}
+/* -------------------- end fixed sticky */
+
+/* Sidebar - racommended topics */
+.topics h2 {
+    margin: 40px 0 20px 0;
+}
+
+.topics-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;  
+}
+
+.topics-list div {
+    margin: 10px 10px;
+    background-color: #f2f2f2;
+    padding: 10px 20px;
+    border-radius: 18px;   
+}
+
+.topics a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 0.9em;
+}
+/* -------------------- end racommended topics */
+
+/* Sidebar - content topics */
+.follow h3 {
+    margin: 40px 0 20px 0;
+}
+
+.user-follow {
+    display: flex;
+    gap: 10px;
+    align-items: center; 
+    margin-top: 20px;
+}
+
+.follow-text {
+    width: 100%;
+}
+
+.follow-text p {
+    margin-top: 10px;
+    color: #757575;
+}
+
+.user-follow img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.user-follow img:hover {
+    cursor: pointer;
+}
+
+.user-follow h4 {
+    font-weight: bold;
+}
+
+.user-follow h4:hover {
+    cursor: pointer;
+}
+
+.follow span {
+    border: 1px solid #a8a8a8;
+    padding: 10px 20px;
+    border-radius: 25px; 
+}
+
+.follow span:hover {
+    cursor: pointer;
+}
+/* -------------------- end content topics */
+
+/* Sidebar - content recently saved */
+.saved-content h3 {
+    margin: 20px 0 20px 0;
+}
+
+.saved-recently {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.saved-recently img {
+    width: 40px;
+    height: 40px;
+}
+
+.saved-recently img {
+    cursor: pointer;
+}
+
+.saved-recently-text p {
+    margin-top: 10px;
+    color: #757575;    
+}
+
+.saved-recently-text i {
+    font-size: 0.8em;
+}
+
+.saved-user {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.saved-user img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.saved-user {
+    cursor: pointer;
+}
+
+.saved-text {
+    margin-top: 20px;
+}
+
+.saved-text p {
+    margin-top: 10px;
+    color: #757575;   
+}
+
+.saved-all {
+    margin-top: 20px;
+}
+
+.saved-all a {
+    text-decoration: none;
+    color: #1a8917;
+    font-size: 1.1em;
+}
+/* -------------------- end content recently saved */
+
+/* Sidebar - menu */
+.sidebar-menu {
+    margin: 50px 0;
+}
+
+.menu-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 20px; 
+}
+
+.menu-list a {
+    text-decoration: none;
+    color: #bdbdbd;
+    font-size: 1.2em;
+}
+/* -------------------- end sidebar menu */
